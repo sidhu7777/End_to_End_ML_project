@@ -20,11 +20,12 @@ This project is designed to guide you through the complete lifecycle of a machin
 
 #requirements.txt: A file listing the necessary Python packages required for the project. This ensures that all dependencies can be installed consistently across different environments.
 
-# 3. Package Configuration
+#3. Package Configuration
 
 #setup.py: A setup script has been implemented to define the project as a Python package. This script includes metadata such as the project name, version, author information, and specifies the required dependencies by reading from requirements.txt.
 
 #4. Logging and Exception Handling
+
 #Logging:
 Added a centralized logger.py module to manage application-wide logging.
 Supports logging levels such as DEBUG, INFO, WARNING, ERROR, and CRITICAL.
