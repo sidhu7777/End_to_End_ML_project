@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: mlproject
+Version: 0.0.1
+Author: vineeth
+Author-email: bvineeth76@gmail.com
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlip
+Requires-Dist: seaborn
