@@ -7,3 +7,6 @@ Requires-Dist: numpy
 Requires-Dist: pandas
 Requires-Dist: matplotlip
 Requires-Dist: seaborn
+Requires-Dist: scikit-learn
+Requires-Dist: catboost
+Requires-Dist: xgboost
