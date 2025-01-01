@@ -1,4 +1,4 @@
- End-to-End Machine Learning Project
+# End-to-End Machine Learning Project
 
 # Overview
 
@@ -6,32 +6,32 @@ This project is designed to guide you through the complete lifecycle of a machin
 
 # Current Progress
 
-#1. Project Initialization
+# 1. Project Initialization
 
-#Repository Setup: A GitHub repository has been created to manage version control and collaboration.
+Repository Setup: A GitHub repository has been created to manage version control and collaboration.
 
-#Directory Structure: The project is organized with the following key components:
+Directory Structure: The project is organized with the following key components:
 
-#src/ Directory: Contains the source code for the project.
+src/ Directory: Contains the source code for the project.
 
-#.gitignore File: Configured to exclude unnecessary files and directories from version control, including the virtual environment directory (venv/).
+.gitignore File: Configured to exclude unnecessary files and directories from version control, including the virtual environment directory (venv/).
 
-#2. Dependency Management
+# 2. Dependency Management
 
-#requirements.txt: A file listing the necessary Python packages required for the project. This ensures that all dependencies can be installed consistently across different environments.
+requirements.txt: A file listing the necessary Python packages required for the project. This ensures that all dependencies can be installed consistently across different environments.
 
-#3. Package Configuration
+# 3. Package Configuration
 
-#setup.py: A setup script has been implemented to define the project as a Python package. This script includes metadata such as the project name, version, author information, and specifies the required dependencies by reading from requirements.txt.
+setup.py: A setup script has been implemented to define the project as a Python package. This script includes metadata such as the project name, version, author information, and specifies the required dependencies by reading from requirements.txt.
 
-#4. Logging and Exception Handling
+# 4. Logging and Exception Handling
 
-#Logging:
+Logging:
 Added a centralized logger.py module to manage application-wide logging.
 Supports logging levels such as DEBUG, INFO, WARNING, ERROR, and CRITICAL.
 Logs are saved to both the console and a file for detailed traceability.
 
-#Exception Handling:
+Exception Handling:
 Implemented a custom exception.py module.
 Provides a custom exception class to capture and log meaningful error messages.
 Ensures consistency in handling and reporting errors.
