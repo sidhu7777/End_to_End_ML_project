@@ -42,24 +42,24 @@ With the foundational setup complete, the upcoming phases of the project will fo
 
 1. Data Acquisition and Preprocessing:
 
-   #Data Collection: Gathering relevant datasets for the machine learning task.
+   Data Collection: Gathering relevant datasets for the machine learning task.
 
-   #Data Cleaning: Handling missing values, correcting inconsistencies, and preparing the data for analysis.
+   Data Cleaning: Handling missing values, correcting inconsistencies, and preparing the data for analysis.
 
-   #Feature Engineering: Creating new features or modifying existing ones to improve model performance.
+   Feature Engineering: Creating new features or modifying existing ones to improve model performance.
 
 2. Model Development:
 
-   #Model Selection: Choosing appropriate machine learning algorithms suited to the problem.
+   Model Selection: Choosing appropriate machine learning algorithms suited to the problem.
 
-   #Training: Training the selected models on the preprocessed data.
+   Training: Training the selected models on the preprocessed data.
 
-   #Evaluation: Assessing model performance using relevant metrics and validation techniques.
+   Evaluation: Assessing model performance using relevant metrics and validation techniques.
 
 3. Deployment:
 
-   #Model Serialization: Saving the trained model for future inference.
+   Model Serialization: Saving the trained model for future inference.
 
-   #API Development: Creating an interface for the model to interact with other applications or users.
+   API Development: Creating an interface for the model to interact with other applications or users.
 
-   #Containerization: Using tools like Docker to package the application for deployment.
+   Containerization: Using tools like Docker to package the application for deployment.
