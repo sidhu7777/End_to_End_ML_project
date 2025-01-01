@@ -24,6 +24,17 @@ This project is designed to guide you through the complete lifecycle of a machin
 
 #setup.py: A setup script has been implemented to define the project as a Python package. This script includes metadata such as the project name, version, author information, and specifies the required dependencies by reading from requirements.txt.
 
+#4. Logging and Exception Handling
+#Logging:
+Added a centralized logger.py module to manage application-wide logging.
+Supports logging levels such as DEBUG, INFO, WARNING, ERROR, and CRITICAL.
+Logs are saved to both the console and a file for detailed traceability.
+
+#Exception Handling:
+Implemented a custom exception.py module.
+Provides a custom exception class to capture and log meaningful error messages.
+Ensures consistency in handling and reporting errors.
+
 # Next Steps
 
 With the foundational setup complete, the upcoming phases of the project will focus on:
