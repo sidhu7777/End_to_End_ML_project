@@ -1,0 +1,5 @@
+[ 2025-01-01 15:39:14,705 ] 29 root - ERROR - An error occurred
+Traceback (most recent call last):
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\exception.py", line 27, in <module>
+    a = 1 / 0  # Deliberate error for testing
+ZeroDivisionError: division by zero
