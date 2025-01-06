@@ -1,0 +1,4 @@
+[ 2025-01-06 20:56:29,074 ] 22 root - INFO - data ingestion initiated
+[ 2025-01-06 20:56:29,097 ] 25 root - INFO - read the dataset as dataframe df
+[ 2025-01-06 20:56:29,155 ] 30 root - INFO - train test split initiated
+[ 2025-01-06 20:56:29,184 ] 36 root - INFO - data ingestion is completed
