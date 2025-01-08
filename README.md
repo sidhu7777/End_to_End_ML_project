@@ -1,65 +1,88 @@
+
 # End-to-End Machine Learning Project
 
-# Overview
+## Overview
 
-This project is designed to guide you through the complete lifecycle of a machine learning application, from initial setup to deployment. The primary objective is to build a structured and modular codebase that facilitates the development and deployment of machine learning models.
+This project guides you through the complete lifecycle of a machine learning application, from initial setup to deployment. The primary objective is to build a structured and modular codebase that facilitates the development and deployment of machine learning models.
 
-# Current Progress
+## Project Structure
 
-# 1. Project Initialization
+```
+End_to_End_ML_project/
+├── artifacts/                 # Directory for storing intermediate artifacts
+├── catboost_info/             # Information related to CatBoost model training
+├── logs/                      # Log files generated during execution
+├── mlproject.egg-info/        # Package metadata
+├── notebook/                  # Jupyter notebooks for experimentation
+├── src/                       # Source code for the project
+│   ├── __init__.py            # Initializes the src module
+│   ├── components/            # Modular components of the pipeline
+│   ├── pipeline/              # Scripts to run the ML pipeline
+│   ├── utils/                 # Utility functions
+├── templates/                 # HTML templates for web application
+├── tests/                     # Unit tests for the project
+├── .gitignore                 # Specifies files to ignore in version control
+├── README.md                  # Project documentation
+├── app.py                     # Flask application for model deployment
+├── requirements.txt           # List of project dependencies
+└── setup.py                   # Setup script for packaging
+```
 
-Repository Setup: A GitHub repository has been created to manage version control and collaboration.
+## Features
 
-Directory Structure: The project is organized with the following key components:
+1. **Data Ingestion**: Scripts to load and validate data from various sources.
+2. **Data Preprocessing**: Handling missing values, feature engineering, and scaling.
+3. **Model Training**: Training machine learning models with hyperparameter tuning.
+4. **Model Evaluation**: Assessing model performance using appropriate metrics.
+5. **Model Deployment**: Deploying the trained model using a Flask web application.
+6. **Logging and Monitoring**: Implementing logging to monitor the pipeline's performance.
 
-src/ Directory: Contains the source code for the project.
+## Installation
 
-.gitignore File: Configured to exclude unnecessary files and directories from version control, including the virtual environment directory (venv/).
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/sidhu7777/End_to_End_ML_project.git
+   cd End_to_End_ML_project
+   ```
 
-# 2. Dependency Management
+2. **Create and activate a virtual environment**:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate   # On Windows: venv\Scripts\activate
+   ```
 
-requirements.txt: A file listing the necessary Python packages required for the project. This ensures that all dependencies can be installed consistently across different environments.
+3. **Install the required dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-# 3. Package Configuration
+## Usage
 
-setup.py: A setup script has been implemented to define the project as a Python package. This script includes metadata such as the project name, version, author information, and specifies the required dependencies by reading from requirements.txt.
+### Running the Application
 
-# 4. Logging and Exception Handling
+1. **Start the Flask application**:
+   ```bash
+   python app.py
+   ```
 
-Logging:
-Added a centralized logger.py module to manage application-wide logging.
-Supports logging levels such as DEBUG, INFO, WARNING, ERROR, and CRITICAL.
-Logs are saved to both the console and a file for detailed traceability.
+2. **Access the application** at `http://localhost:5000`.
 
-Exception Handling:
-Implemented a custom exception.py module.
-Provides a custom exception class to capture and log meaningful error messages.
-Ensures consistency in handling and reporting errors.
+### Training the Model
 
-# Next Steps
+1. **Navigate to the source directory**:
+   ```bash
+   cd src/pipeline
+   ```
 
-With the foundational setup complete, the upcoming phases of the project will focus on:
+2. **Run the training script**:
+   ```bash
+   python train_pipeline.py
+   ```
 
-1. Data Acquisition and Preprocessing:
+### Running Tests
 
-   Data Collection: Gathering relevant datasets for the machine learning task.
+1. **Execute unit tests**:
+   ```bash
+   pytest tests/
+   ```
 
-   Data Cleaning: Handling missing values, correcting inconsistencies, and preparing the data for analysis.
-
-   Feature Engineering: Creating new features or modifying existing ones to improve model performance.
-
-2. Model Development:
-
-   Model Selection: Choosing appropriate machine learning algorithms suited to the problem.
-
-   Training: Training the selected models on the preprocessed data.
-
-   Evaluation: Assessing model performance using relevant metrics and validation techniques.
-
-3. Deployment:
-
-   Model Serialization: Saving the trained model for future inference.
-
-   API Development: Creating an interface for the model to interact with other applications or users.
-
-   Containerization: Using tools like Docker to package the application for deployment.
