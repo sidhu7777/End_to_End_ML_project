@@ -1,0 +1,209 @@
+[ 2025-01-08 14:13:46,872 ] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.167.142:5000
+[ 2025-01-08 14:13:46,873 ] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2025-01-08 14:27:56,826 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 14:27:56] "GET / HTTP/1.1" 200 -
+[ 2025-01-08 14:27:56,990 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 14:27:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2025-01-08 14:29:18,200 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 14:29:18] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-01-08 14:29:51,913 ] 875 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py", line 58, in load_object
+    with open(file_path, "rb") as file_obj:
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\preprocessor.pkl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\pipeline\predict_pipeline.py", line 17, in predict
+    preprocessor=load_object(file_path=preprocessor_path)
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py", line 62, in load_object
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py] line number [58] error message[[Errno 2] No such file or directory: 'artifacts\\preprocessor.pkl']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\pipeline\predict_pipeline.py", line 24, in predict
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\91832\Desktop\End_to_End _ML_Project\src\pipeline\predict_pipeline.py] line number [17] error message[Error occured in python script name [C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py] line number [58] error message[[Errno 2] No such file or directory: 'artifacts\\preprocessor.pkl']]
+[ 2025-01-08 14:29:51,924 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 14:29:51] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2025-01-08 14:30:04,023 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 14:30:04] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-01-08 14:30:29,046 ] 875 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py", line 58, in load_object
+    with open(file_path, "rb") as file_obj:
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\preprocessor.pkl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\pipeline\predict_pipeline.py", line 17, in predict
+    preprocessor=load_object(file_path=preprocessor_path)
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py", line 62, in load_object
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py] line number [58] error message[[Errno 2] No such file or directory: 'artifacts\\preprocessor.pkl']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\pipeline\predict_pipeline.py", line 24, in predict
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\91832\Desktop\End_to_End _ML_Project\src\pipeline\predict_pipeline.py] line number [17] error message[Error occured in python script name [C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py] line number [58] error message[[Errno 2] No such file or directory: 'artifacts\\preprocessor.pkl']]
+[ 2025-01-08 14:30:29,050 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 14:30:29] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2025-01-08 14:36:53,190 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 14:36:53] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-01-08 14:37:19,108 ] 875 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py", line 58, in load_object
+    with open(file_path, "rb") as file_obj:
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\preprocessor.pkl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\pipeline\predict_pipeline.py", line 17, in predict
+    preprocessor=load_object(file_path=preprocessor_path)
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py", line 62, in load_object
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py] line number [58] error message[[Errno 2] No such file or directory: 'artifacts\\preprocessor.pkl']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\pipeline\predict_pipeline.py", line 24, in predict
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\91832\Desktop\End_to_End _ML_Project\src\pipeline\predict_pipeline.py] line number [17] error message[Error occured in python script name [C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py] line number [58] error message[[Errno 2] No such file or directory: 'artifacts\\preprocessor.pkl']]
+[ 2025-01-08 14:37:19,120 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 14:37:19] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2025-01-08 14:38:11,755 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 14:38:11] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-01-08 14:38:15,531 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 14:38:15] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-01-08 14:38:16,867 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 14:38:16] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-01-08 14:38:36,116 ] 875 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py", line 58, in load_object
+    with open(file_path, "rb") as file_obj:
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\preprocessor.pkl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\pipeline\predict_pipeline.py", line 17, in predict
+    preprocessor=load_object(file_path=preprocessor_path)
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py", line 62, in load_object
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py] line number [58] error message[[Errno 2] No such file or directory: 'artifacts\\preprocessor.pkl']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\pipeline\predict_pipeline.py", line 24, in predict
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\91832\Desktop\End_to_End _ML_Project\src\pipeline\predict_pipeline.py] line number [17] error message[Error occured in python script name [C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py] line number [58] error message[[Errno 2] No such file or directory: 'artifacts\\preprocessor.pkl']]
+[ 2025-01-08 14:38:36,120 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 14:38:36] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2025-01-08 14:49:02,586 ] 875 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py", line 58, in load_object
+    with open(file_path, "rb") as file_obj:
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\preprocessor.pkl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\pipeline\predict_pipeline.py", line 17, in predict
+    preprocessor=load_object(file_path=preprocessor_path)
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py", line 62, in load_object
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py] line number [58] error message[[Errno 2] No such file or directory: 'artifacts\\preprocessor.pkl']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\pipeline\predict_pipeline.py", line 24, in predict
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\91832\Desktop\End_to_End _ML_Project\src\pipeline\predict_pipeline.py] line number [17] error message[Error occured in python script name [C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py] line number [58] error message[[Errno 2] No such file or directory: 'artifacts\\preprocessor.pkl']]
+[ 2025-01-08 14:49:02,615 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 14:49:02] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2025-01-08 14:49:06,132 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 14:49:06] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-01-08 14:49:29,365 ] 875 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py", line 58, in load_object
+    with open(file_path, "rb") as file_obj:
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\preprocessor.pkl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\pipeline\predict_pipeline.py", line 17, in predict
+    preprocessor=load_object(file_path=preprocessor_path)
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py", line 62, in load_object
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py] line number [58] error message[[Errno 2] No such file or directory: 'artifacts\\preprocessor.pkl']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+  File "C:\Users\91832\Desktop\End_to_End _ML_Project\src\pipeline\predict_pipeline.py", line 24, in predict
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\91832\Desktop\End_to_End _ML_Project\src\pipeline\predict_pipeline.py] line number [17] error message[Error occured in python script name [C:\Users\91832\Desktop\End_to_End _ML_Project\src\utils.py] line number [58] error message[[Errno 2] No such file or directory: 'artifacts\\preprocessor.pkl']]
+[ 2025-01-08 14:49:29,368 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 14:49:29] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2025-01-08 15:30:25,409 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 15:30:25] "GET / HTTP/1.1" 200 -
+[ 2025-01-08 15:33:21,645 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 15:33:21] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-01-08 15:33:45,998 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 15:33:45] "POST /predictdata HTTP/1.1" 200 -
