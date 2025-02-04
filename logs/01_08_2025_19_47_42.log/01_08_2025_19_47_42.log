@@ -1,0 +1,5 @@
+[ 2025-01-08 19:47:42,934 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-01-08 19:47:42,964 ] 97 werkzeug - INFO -  * Debugger PIN: 119-089-058
+[ 2025-01-08 19:49:28,761 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 19:49:28] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-01-08 19:50:00,706 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 19:50:00] "POST /predictdata HTTP/1.1" 200 -
+[ 2025-01-08 19:51:32,723 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Jan/2025 19:51:32] "POST /predictdata HTTP/1.1" 200 -
