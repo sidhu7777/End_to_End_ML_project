@@ -100,12 +100,6 @@ The following **ML models** were trained and evaluated:
 4️⃣ **Gradient Boosting (GBM)** – Boosted trees for improved accuracy.  
 5️⃣ **CatBoost Regressor** – Best-performing model with auto-handling of categorical features.
 
-📌 **Final Model:** **CatBoost Regressor** 🏆
-
-- **Accuracy (R² Score):** 92%
-- **RMSE:** 4.23
-- **MAE:** 3.15
-
 ---
 
 ## ⚙️ Installation
