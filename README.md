@@ -146,4 +146,11 @@ The following **ML models** were trained and evaluated:
 
 ---
 
+Final Wed Interface :
+
+<img width="648" alt="Final_ML_Capture" src="https://github.com/user-attachments/assets/e69fff43-c447-40d2-bdf8-2acdc7afe117" />
+
+
+
+
 🎯 **This project is designed for individuals looking to learn and implement end-to-end machine learning solutions.** Happy Coding! 🚀
